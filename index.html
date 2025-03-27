@@ -20,7 +20,7 @@
     />
     <title>Dev Burguer - A melhor hamburgueria dev!</title>
   </head>
-  <body class="flex items-center flex-col">
+  <body class="flex items-center flex-col overflow-x-hidden">
     <header
       class="shadow w-full h-[420px] bg-zinc-900 bg-[url('/src/images/bg.png')] bg-cover bg-center"
     >
@@ -42,8 +42,8 @@
     </h2>
 
     <!--INICIO MENU-->
-    <div id="menu" class="w-[80%] mb-[80px] pt-[50px] rounded-1xl">
-      <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-12 mx-auto max-w-6xl px-2 mb-16">
+    <div id="menu" class="lg:w-[80%] w-[98%] mb-[80px] pt-[50px] rounded-1xl">
+      <main class="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-12 mx-auto max-w-6xl px-2 mb-16">
         <!--INICIO PRODUTO-->
         <div class="flex gap-2 bg-neutral-900 text-white p-[15px] rounded-1xl">
           <img
@@ -276,7 +276,7 @@
       </div>
 
       <!--GRID BEBIDAS-->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-12 mx-auto max-w-6xl px-2 mb-16" id="menu">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-12 mx-auto max-w-6xl px-2 mb-16" id="menu">
         <!--INICIO BEBIDA ITEM-->
         <div class="flex gap-2 w-full bg-neutral-900 text-white p-[15px] rounded-1xl">
           <img
@@ -333,39 +333,41 @@
     <!--FIM MENU-->
       <!-- INICIO INFORMAÇÕES DA LOJA-->
           
-    <div class="relative bg-amber-500 w-full h-[70vh] shadow flex items-center justify-center   ">
-      <div id="information_left" class="w-[35%] h-[80%]  ">
+    <div class="relative bg-amber-500 w-full md:h-[70vh] h-[100vh] shadow3 items-center justify-center flex md:flex-row flex-col-reverse p-[20px] pb-[40px]  ">
+      <div id="information_left" class="md:w-[35%] md:h-[80%] w-full  ">
         <div class="mb-[60px]">
           <h3 class="text-white text-[26px] font-bold uppercase">horário de funcionamento</h3>
           <p class="text-white text-[24px] ">Segunda a domingo das 18:00 ás 22:00</p>
         </div>
-        <div class="mb-[80px]">
+        <div class="md:mb-[80px] mb-[50px]">
           <h3 class="text-white font-bold text-[26px] uppercase ">Endereço</h3>
           <p class="text-white cursor-pointer text-[24px] ">Rua Dev 10, Bairro Tecnópolis, Campo Grande - MS, 79000-000</p>
         </div>
-        <div class="w-[190px] flex justify-between">
-          <a href=""><button class="cursor-pointer shadow2 w-[50px] h-[50px] bg-amber-100 rounded-4xl mr-[20px] flex justify-center items-center">
-            <i class="fab fa-whatsapp  text-[30px]"></i>
-        </button></a>
-        
-        <a href=""><button class="cursor-pointer shadow2 w-[50px] h-[50px] bg-amber-100 rounded-4xl mr-[20px] flex justify-center items-center">
-            <i class="fab fa-instagram  text-[30px]"></i>
-        </button></a>
-        
-        <a href=""><button class="cursor-pointer shadow2 w-[50px] h-[50px] bg-amber-100 rounded-4xl mr-[20px] flex justify-center items-center">
-            <i class="fab fa-facebook-f text-[30px]"></i>
-        </button></a>
+          <div class="w-[190px] flex justify-between">
+              <a href=""><button class="cursor-pointer shadow2 w-[50px] h-[50px] bg-amber-100 rounded-4xl mr-[20px] flex justify-center items-center">
+                <i class="fab fa-whatsapp  text-[30px]"></i>
+            </button></a>
+            
+            <a href=""><button class="cursor-pointer shadow2 w-[50px] h-[50px] bg-amber-100 rounded-4xl mr-[20px] flex justify-center items-center">
+                <i class="fab fa-instagram  text-[30px]"></i>
+            </button></a>
+            
+            <a href=""><button class="cursor-pointer shadow2 w-[50px] h-[50px] bg-amber-100 rounded-4xl mr-[20px] flex justify-center items-center">
+                <i class="fab fa-facebook-f text-[30px]"></i>
+            </button></a>
         </div>
+      
       </div>
-      <div id="information_rigth" class="w-[35%] h-[80%] ml-[100px] ">
-        <div>
+      <div id="information_rigth" class="md:w-[35%] md:h-[80%] md:ml-[100px] w-full ">
+        <div class="mb-[60px]">
           <h3 class="text-white cursor-pointer text-[26px]  ">(00) 0 0000-0000</h3>
           <p class="text-white cursor-pointer text-[26px] ">email@email.com</p>
           
         </div>
        
+       
       </div>
-      <img class="w-[350px] h-[300px] absolute right-0 bottom-12" src="/src/images/burguer.png" alt="">
+      <img class="hidden md:block w-[350px] h-[300px] absolute right-0 bottom-12" src="/src/images/burguer.png" alt="">
       
       </div>
        <!--FIM INFORMAÇÕES DA LOJA-->
@@ -411,8 +413,8 @@
 
     
 
-    <footer class="w-full  bg-red-600 py-3 fixed bottom-0 z-40 flex items-center justify-center">
-      <button class="flex cursor-pointer items-center text-[17px] gap-2 text-white font-bold" id="cart-btn">
+    <footer class="w-full  bg-red-600 md:py-3 py-4 fixed bottom-0 z-40 flex items-center justify-center">
+      <button class="flex cursor-pointer items-center md:text-[17px] text-[19px] gap-2 text-white font-bold" id="cart-btn">
         (<span id="cart-count">0</span>) Veja meu carrinho
         <i class="fa fa-cart-plus text-lg text-white"></i>
       </button>

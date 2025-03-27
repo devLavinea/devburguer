@@ -196,3 +196,36 @@ if(isOpen){
     spanItem.classList.remove("bg-green-600") 
     spanItem.classList.add("bg-red-600")
 }
+
+
+
+//---- Scroll Reveal
+
+document.addEventListener('DOMContentLoaded', function(){
+
+
+
+ScrollReveal().reveal('#information_left', {
+  origin: 'left',
+  duration: 1500,
+  distance: '20%'
+});
+
+ScrollReveal().reveal('#title', {
+  origin: 'top',
+  duration: 1500,
+  distance: '30%'
+});
+
+ScrollReveal().reveal('#menu', {
+  origin: 'top',
+  duration: 1500,
+  distance: '5%'
+});
+ScrollReveal().reveal('#information_rigth', {
+  origin: 'rigth',
+  duration: 1500,
+  distance: '20%'
+});
+
+});
